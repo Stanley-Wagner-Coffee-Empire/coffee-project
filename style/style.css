@@ -58,3 +58,24 @@ h1 {
 .divider {
     margin: 3em;
 }
+
+#roastAddSelection{
+    margin: 2em;
+}
+
+#coffeeAddName{
+    margin: 2em;
+}
+
+#roast-add-selection {
+    width: 100%;
+}
+
+#coffee-add-name{
+    width: 100%;
+}
+
+.submit{
+    margin-top: 1em;
+    width: 100%;
+}
