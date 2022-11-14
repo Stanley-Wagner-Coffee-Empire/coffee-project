@@ -8,6 +8,7 @@ function searchCoffees (searchInput){
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
         let coffeeNameLower = coffee.name.toLowerCase();
+        coffeeSearch = coffeeSearch.toLowerCase();
             if (coffeeNameLower.includes(coffeeSearch)){
                 filteredCoffees.push(coffee);
             }
