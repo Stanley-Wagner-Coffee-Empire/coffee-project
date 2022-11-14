@@ -16,10 +16,10 @@ function searchCoffees (searchInput){
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-    //change this so it goes out in divs instead of table. ID's do not need to be displayed.
+
 function renderCoffee(coffee) {
     let html = '<div class="coffee">'
-    html += '<h2 class="coffeeName">' + coffee.name + '</h2>' + ' ' + '<p class="roastLevel">' + coffee.roast + '</p>' ;
+    html += '<h2 class="coffeeName">' + coffee.name + '</h2>' + ' ' + '<p class="roastLevel">' + coffee.roast + " " +coffee.id +  '</p>' ;
     html += '</div>';
 
     return html;
@@ -27,7 +27,6 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     let html = '';
-    // switch this to go from id 1-end rather than end-1 as it is now
     for(let i = 0 ; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
@@ -53,23 +52,24 @@ function updateCoffees(e) {
 }
 
 let roastIdNumber = 4;
-let coffeesAdded = 0;
+let coffeesAddedLight = 0;
+let coffeesAddedMed = 0;
+let coffeesAddedDark = 0;
 
 function roastId (){
-    let lights = 3;
+   let lights = 3;
     let mediums = 6;
     let darks = 14;
         if (addCoffeeRoast.value === "light"){
             lights ++;
-            roastIdNumber = lights;
+            roastIdNumber = lights + coffeesAddedLight;
         } else if (addCoffeeRoast.value === "medium"){
             mediums++;
-            roastIdNumber = mediums;
+            roastIdNumber = mediums + coffeesAddedMed;
         } else if (addCoffeeRoast.value === "dark"){
             darks++;
-            roastIdNumber = darks;
+            roastIdNumber = darks + coffeesAddedDark;
         }
-
     console.log(roastIdNumber);
     return roastIdNumber;
 }
@@ -77,15 +77,24 @@ function roastId (){
 function addCoffee (e){
     e.preventDefault();
     let newCoffee ={
-        id: roastIdNumber + coffeesAdded,
+        id: roastIdNumber,
         name: addCoffeeName.value,
         roast: addCoffeeRoast.value,
     }
-    coffees.splice((roastIdNumber+coffeesAdded)-1, 0, newCoffee);
-    for (let i = roastIdNumber+coffeesAdded ; i <= coffees.length - 1; i++){
+    coffees.splice((roastIdNumber)-1, 0, newCoffee);
+    for (let i = roastIdNumber ; i <= coffees.length - 1; i++){
         coffees[i].id ++;
     }
-    coffeesAdded++;
+    if (addCoffeeRoast.value === "light"){
+        coffeesAddedLight++;
+        coffeesAddedMed++;
+        coffeesAddedDark++;
+    } else if (addCoffeeRoast.value === "medium"){
+        coffeesAddedMed++;
+        coffeesAddedDark++;
+    } else if (addCoffeeRoast.value === "dark"){
+        coffeesAddedDark++;
+    }
     tbody.innerHTML = renderCoffees(coffees);
 }
 
