@@ -1,6 +1,21 @@
 (function(){
 "use strict"
 
+
+function searchCoffees (searchInput){
+    searchInput.preventDefault();
+    let coffeeSearch = coffeeSelection.value;
+    let filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        let coffeeNameLower = coffee.name.toLowerCase();
+            if (coffeeNameLower.includes(coffeeSearch)){
+                filteredCoffees.push(coffee);
+            }
+
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
     //change this so it goes out in divs instead of table. ID's do not need to be displayed.
 function renderCoffee(coffee) {
     let html = '<div class="coffee">'
@@ -53,11 +68,13 @@ let coffees = [
 ];
 
 let tbody = document.querySelector('#coffees');
-let submitButton = document.querySelector('#submit');
+let roastSelectDropdown = document.querySelector('#roast-selection');
 let roastSelection = document.querySelector('#roast-selection');
+let coffeeSelection = document.querySelector('#coffee-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelectDropdown.addEventListener('change', updateCoffees);
+coffeeSelection.addEventListener('keyup', searchCoffees);
 
 })();
