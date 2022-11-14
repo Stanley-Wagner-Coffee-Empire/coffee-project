@@ -71,7 +71,6 @@ function roastId (){
             darks++;
             roastIdNumber = darks + coffeesAddedDark;
         }
-    console.log(roastIdNumber);
     return roastIdNumber;
 }
 
@@ -131,7 +130,8 @@ tbody.innerHTML = renderCoffees(coffees);
 
 roastSelectDropdown.addEventListener('change', updateCoffees);
 coffeeSelection.addEventListener('keyup', searchCoffees);
+addCoffeeButton.addEventListener('click', roastId);
 addCoffeeButton.addEventListener('click', addCoffee);
-addCoffeeRoast.addEventListener('mouseleave', roastId);
+
 
 })();
