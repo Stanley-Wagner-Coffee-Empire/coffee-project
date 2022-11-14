@@ -6,21 +6,52 @@ h1 {
     text-align: center;
 }
 
-/*table {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
+.coffeePage{
+    display: flex;
+    flex-direction: row;
+}
 
-/*td, th {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px 10px;*/
-/*}*/
+.coffeeList{
+    width: 50%;
+}
+
+.formInputs{
+    flex-grow: 2;
+    width: 50%;
+    flex-direction: column;
+}
+
+.coffee {
+    margin: 2em;
+    float: left;
+    width: 25%;
+}
 
 .coffeeName {
     font-size: large;
     font-weight: bold;
+    display: inline;
 }
 
 .roastLevel {
     color: darkgray;
+    display: inline;
+}
+
+#coffee-selection {
+    width: 100%;
+}
+
+#roast-selection {
+    width: 100%;
+}
+
+#roastDropdown {
+    margin: 2em;
+    font-weight: bold;
+}
+
+#coffeeSearch {
+    margin: 2em;
+    font-weight: bold;
 }

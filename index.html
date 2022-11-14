@@ -10,35 +10,33 @@
 </head>
 <body>
     <h1>Coffee!</h1>
+    <div class="coffeePage">
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input type="text" id="coffee-selection">
-        <input id="submit" type="submit" />
-    </form>
+        <div class="coffeeList">
+            <div id="coffees">
 
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
-
-    <div>
-        <div id="coffees">
-
+            </div>
         </div>
-    </div>
 
+        <div class="formInputs">
+            <form>
+                <div id="roastDropdown">
+                    <label for="roast-selection">Roast</label>
+                    <select id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div id="coffeeSearch">
+                    <label for="coffee-selection">Coffee Name</label>
+                    <input type="text" id="coffee-selection">
+                    <input id="submit" type="submit" />
+                </div>
+            </form>
+        </div>
+
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
