@@ -3,63 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>Stanley and Wagner's coffee empire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Coffee!</h1>
-    <hr class="divider">
-    <div class="coffeePage">
-
-        <div class="coffeeList">
-            <div id="coffees">
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark p-4">
+        <div class="container-fluid">
+            <a href=""><img src="assets/pngegg.png" alt="" style="max-height: 90px; max-width: 90px;"></a>
+            <a class="navbar-brand fs-3 fw-bold text-white p-3" href="#">The Kettle Run</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Rules</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <div class="formInputs">
-            <form>
-                <div id="roastDropdown">
-                    <label for="roast-selection">Roast</label>
-                    <select id="roast-selection">
-                        <option>all roast types</option>
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
+<!--    <h1>Coffee!</h1>-->
+<!--    <hr class="divider">-->
+    <div class="container-fluid coffeePage">
+        <div class="row">
+            <div class="col">
+                <div class="coffeeList">
+                    <div id="coffees">
+
+                    </div>
                 </div>
+            </div>
+            <div class="col">
+                <div class="formInputs">
+                    <form>
+                        <div id="roastDropdown">
+                            <label for="roast-selection">Roast</label>
+                            <select id="roast-selection">
+                                <option>all roast types</option>
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                        </div>
 
-                <div id="coffeeSearch">
-                    <label for="coffee-selection">Coffee Name</label>
-                    <input type="search" id="coffee-selection">
-                    <input id="submit" type="submit" class="submit"/>
-                </div>
-            </form>
-            <hr class="divider">
+                        <div id="coffeeSearch">
+                            <label for="coffee-selection">Coffee Name</label>
+                            <input type="search" id="coffee-selection">
+                            <input id="submit" type="submit" class="submit"/>
+                        </div>
+                    </form>
+                    <hr class="divider">
 
-            <h1>Add a coffee</h1>
-            <form>
-                <div id="roastAddSelection">
-                    <label for="roast-add-selection">Roast</label>
-                    <select id="roast-add-selection">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                </div>
+                    <h1>Add a coffee</h1>
+                    <form>
+                        <div id="roastAddSelection">
+                            <label for="roast-add-selection">Roast</label>
+                            <select id="roast-add-selection">
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                        </div>
 
-                <div id="coffeeAddName">
-                    <label for="coffee-add-name">Coffee Name</label>
-                    <input type="text" id="coffee-add-name">
-                    <input id="submitAdd" type="submit" class="submit"/>
-                </div>
-
-            </form>
+                        <div id="coffeeAddName">
+                            <label for="coffee-add-name">Coffee Name</label>
+                            <input type="text" id="coffee-add-name">
+                            <input id="submitAdd" type="submit" class="submit"/>
+                        </div>
+                    </form>
+            </div>
         </div>
 
     </div>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
