@@ -20,7 +20,7 @@ function searchCoffees (searchInput){
 
 function renderCoffee(coffee) {
     let html = '<div class="coffee">'
-    html += '<h2 class="coffeeName">' + coffee.name + '</h2>' + ' ' + '<p class="roastLevel">' + coffee.roast + " " +coffee.id +  '</p>' ;
+    html += '<h2 class="coffeeName fs-5">' + coffee.name + '</h2>' + ' ' + '<p class="roastLevel text-muted fs-6 fw-bolder">' + coffee.roast + " " +coffee.id +  '</p>' ;
     html += '</div>';
 
     return html;

@@ -1,24 +1,13 @@
 body {
     font-family: 'Roboto', sans-serif;
+    background-image: url("../assets/output-onlinepngtools.png");
+    background-size: cover;
 }
 
 h1 {
     text-align: center;
 }
 
-.coffeePage{
-    display: flex;
-    flex-direction: row;
-}
-
-.coffeeList{
-    width: 50%;
-}
-
-.formInputs{
-    width: 50%;
-    flex-direction: column;
-}
 
 .coffee {
     margin: 2em;
@@ -33,21 +22,23 @@ h1 {
 }
 
 .roastLevel {
-    color: darkgray;
     display: inline;
 }
 
 #coffee-selection {
     width: 100%;
+    opacity: 0.4;
 }
 
 #roast-selection {
     width: 100%;
+    opacity: 0.4;
 }
 
 #roastDropdown {
     margin: 2em;
     font-weight: bold;
+
 }
 
 #coffeeSearch {
@@ -69,10 +60,12 @@ h1 {
 
 #roast-add-selection {
     width: 100%;
+    opacity: 0.4;
 }
 
 #coffee-add-name{
     width: 100%;
+    opacity: 0.4;
 }
 
 .submit{
@@ -80,14 +73,6 @@ h1 {
     width: 100%;
 }
 
-.coffeePage::before {
-    content: "";
-    background-image: url(../assets/assets.jpeg);
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.4;
+hr {
+    border-top: 4px double black;
 }

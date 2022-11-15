@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark p-4">
@@ -33,10 +33,9 @@
         </div>
     </nav>
 
-<!--    <h1>Coffee!</h1>-->
-<!--    <hr class="divider">-->
+
     <div class="container-fluid coffeePage">
-        <div class="row">
+        <div class="row row-cols-2">
             <div class="col d-flex justify-content-center pt-5">
                 <div class="coffeeList">
                     <div id="coffees">
@@ -44,8 +43,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col d-flex justify-content-center align-items-center">
+            <div class="col justify-content-center align-items-center">
                 <div class="formInputs">
+                    <h1 class="fw-bolder mt-3">Search for Coffee</h1>
                     <form class="form-border">
                         <div id="roastDropdown">
                             <label for="roast-selection">Roast</label>
@@ -60,15 +60,14 @@
                         <div id="coffeeSearch">
                             <label for="coffee-selection">Coffee Name</label>
                             <input type="search" id="coffee-selection">
-                            <input id="submit" type="submit" class="submit"/>
                         </div>
                     </form>
                     <hr class="divider">
 
-                    <h1>Add a coffee</h1>
+                    <h1 class="fw-bolder">Add a coffee</h1>
                     <form class="form-border">
                         <div id="roastAddSelection">
-                            <label for="roast-add-selection">Roast</label>
+                            <label for="roast-add-selection" class="fw-bolder">Roast</label>
                             <select id="roast-add-selection">
                                 <option>light</option>
                                 <option>medium</option>
@@ -77,14 +76,14 @@
                         </div>
 
                         <div id="coffeeAddName">
-                            <label for="coffee-add-name">Coffee Name</label>
+                            <label for="coffee-add-name" class="fw-bolder">Coffee Name</label>
                             <input type="text" id="coffee-add-name">
-                            <input id="submitAdd" type="submit" class="submit"/>
+                            <input id="submitAdd" type="submit" class="submit btn btn-dark"/>
                         </div>
                     </form>
             </div>
         </div>
-
+    </div>
     </div>
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
