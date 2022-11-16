@@ -50,11 +50,11 @@ h1 {
     margin: 3em;
 }
 
-#roastAddSelection{
+#roastAddSelection {
     margin: 2em;
 }
 
-#coffeeAddName{
+#coffeeAddName {
     margin: 2em;
 }
 
@@ -63,12 +63,12 @@ h1 {
     opacity: 0.4;
 }
 
-#coffee-add-name{
+#coffee-add-name {
     width: 100%;
     opacity: 0.4;
 }
 
-.submit{
+.submit {
     margin-top: 1em;
     width: 100%;
 }
