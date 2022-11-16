@@ -12,17 +12,14 @@
             if (coffeeNameLower.includes(coffeeSearch)) {
                 filteredCoffees.push(coffee);
             }
-
         });
         tbody.innerHTML = renderCoffees(filteredCoffees);
     }
-
 
     function renderCoffee(coffee) {
         let html = '<div class="coffee">'
         html += '<h2 class="coffeeName fs-5">' + coffee.name + '</h2>' + ' ' + '<p class="roastLevel text-muted fs-6 fw-bolder">' + coffee.roast + '</p>';
         html += '</div>';
-
         return html;
     }
 
@@ -34,11 +31,9 @@
         return html;
     }
 
-
 // "e" stands for event here. Change event is preferred for the drop down select. Also for the search, probably keyup event
     function updateCoffees(e) {
-        e.preventDefault(); // don't submit the form, we just want to update the data
-//selected roast is what they're looking for and entering in the search or the filter field.
+        e.preventDefault(); // don't submit the form, we just want to update the data selected roast is what they're looking for and entering in the search or the filter field.
         let selectedRoast = roastSelection.value;
         let filteredCoffees = [];
         if (selectedRoast === "all roast types") {
@@ -49,7 +44,6 @@
             }
             tbody.innerHTML = renderCoffees(filteredCoffees);
         });
-
     }
 
     let roastIdNumber = 4;
@@ -164,7 +158,6 @@
         rotated.style.transform = 'rotate(0deg)';
         elem.style.left = 0 + 'px';
     }
-
     //kick off the reset function on page load
     window.onload = function () {
         reset();
